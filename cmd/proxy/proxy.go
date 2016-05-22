@@ -60,6 +60,11 @@ func (s server) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     r := server{}
+    
+    
+    if ccpendpoint := os.Getenv("CCPENDPOINT"); ccpendpoint != "" {
+        ccpEndpoint, _ = url.Parse(ccpendpoint)
+    }
 	if port := os.Getenv("PORT"); port != "" {
 	    http.ListenAndServe(fmt.Sprintf(":%s", port), r)
 	} else {

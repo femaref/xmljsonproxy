@@ -10,4 +10,6 @@ Use either `xmljsonproxy.Transform` (if you have a `io.Reader`) or `xmljsonproxy
 
 ### As a proxy
 
-Run the binary, and change your endpoint from `https://api.eveonline.com` to `http://localhost:9293`. You can overwrite the port with the `$PORT` environment variable.
+Run the binary, and change your endpoint from `https://api.eveonline.com` to `http://localhost:9293`. 
+
+You can overwrite the port with the `$PORT` environment variable, as well as the endpoint url with `$CCPENDPOINT`.
